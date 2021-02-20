@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+:root {
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #3268db;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+a.button {
+  font-family: inherit;
+  font-size: inherit;
+  border: 0;
+  transition: background-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  min-width: 16rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #ff6263;
+  color: #fff;
+  border-radius: 10rem;
+}
+
+p {
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+header .navbar {
+  height: 10rem;
+  position: relative;
+  z-index: 10;
+}
+header .navbar .wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+header .navbar .logo {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+header .navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+header .navbar ul li {
+  color: #000;
+  font-weight: bold;
+  margin-left: 3rem;
+  cursor: pointer;
+}
+header .navbar ul li img {
+  height: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+header .navbar button {
+  margin-left: auto;
+}
+
+#editorial-process {
+  margin-top: 10rem;
+  overflow: hidden;
+}
+#editorial-process .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+#editorial-process .heading {
+  max-width: 600px;
+  flex-basis: 400px;
+  margin-top: 4rem;
+  margin-right: 4rem;
+}
+#editorial-process .heading p {
+  margin-top: 1rem;
+}
+#editorial-process .processes {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  color: #222;
+}
+#editorial-process .processes .step {
+  width: 60px;
+  transition: width 0.5s ease-in-out;
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+}
+#editorial-process .processes .step .title {
+  white-space: nowrap;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: -2.7rem;
+  margin: 1.5rem;
+  line-height: 1.2;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+#editorial-process .processes .step .content {
+  padding: 4rem;
+  opacity: 0;
+  visibility: hidden;
+}
+#editorial-process .processes .step .content .content-heading {
+  max-width: 400px;
+}
+#editorial-process .processes .step .content p {
+  margin-top: 1rem;
+  max-width: 400px;
+}
+#editorial-process .processes .step:first-child {
+  background-color: #eef7ff;
+}
+#editorial-process .processes .step:nth-child(2) {
+  background-color: #ddefff;
+}
+#editorial-process .processes .step:nth-child(3) {
+  background-color: #c5e4ff;
+}
+#editorial-process .processes .step:nth-child(4) {
+  background-color: #a8d8ff;
+}
+#editorial-process .processes .step:nth-child(5) {
+  background-color: #8eccff;
+}
+#editorial-process .processes .step.active {
+  width: calc(100% - 4 * 60px);
+  cursor: initial;
+}
+#editorial-process .processes .step.active .title {
+  opacity: 0;
+  visibility: hidden;
+}
+#editorial-process .processes .step.active .content {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 1300px) {
+  #editorial-process .wrapper {
+    display: block;
+  }
+  #editorial-process .heading {
+    margin: 0;
+    margin-bottom: 4rem;
+  }
+  #editorial-process .processes {
+    overflow: hidden;
+  }
+}
+@media (max-width: 840px) {
+  #editorial-process .processes {
+    flex-direction: column;
+  }
+  #editorial-process .processes .step {
+    width: 100%;
+    max-height: 60px;
+    transition: max-height 0.5s ease-in-out;
+  }
+  #editorial-process .processes .step .title {
+    white-space: initial;
+    left: 0;
+    top: 0;
+    bottom: initial;
+    margin: 0 3rem;
+    transform: rotate(0);
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+  }
+  #editorial-process .processes .step .content {
+    padding: 3rem;
+  }
+  #editorial-process .processes .step.active {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
